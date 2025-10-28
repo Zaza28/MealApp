@@ -1,0 +1,14 @@
+h1 {
+  color: rgba(133, 192, 110, 0.823);
+  font-family: Arial, Helvetica, sans-serif;
+}
+#search-bar {
+  border-radius: 30px;
+  height: 20px;
+  width: 300px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgb(219, 166, 166);
+}
+input:focus {
+  border: rgb(219, 166, 166);
+}

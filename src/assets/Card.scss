@@ -1,0 +1,88 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 15px;
+  padding: 10px;
+}
+
+.card {
+  width: 20%;
+  min-height: 500px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgb(219, 166, 166);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+h4 {
+  color: rgb(240, 105, 105);
+  font-size: 25px;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+span {
+  font-weight: 500;
+  color: darkolivegreen;
+}
+
+h5 {
+  font-weight: 900;
+  font-size: 14px;
+  color: darkolivegreen;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.recipes-info {
+  list-style-type: none;
+}
+
+img {
+  object-fit: cover;
+  width: 50%;
+  height: auto;
+}
+
+.recipes-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.recipes-content p {
+  text-align: center;
+  white-space: pre-line;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &.collapsed {
+    overflow: hidden;
+    max-height: 200px; // Limite la hauteur en mode replié
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+
+  &.expanded {
+    max-height: none;
+  }
+}
+.expand-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  color: rgb(240, 105, 105);
+  background: white; // Fond pour être visible sur le dégradé
+  padding: 2px 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
